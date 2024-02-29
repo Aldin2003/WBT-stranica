@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ba">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--ikonice-->
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="android-icon.svg">
+    <title>Android</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="index.html"> <img src="logo.png" width="100" height="50" alt="logo"> </a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul> <!-- Ovdje sam baratao prije sa ovim onclick sctollto da skontam za portfolio kako napraviti da skrola, tldr. to mi nije uspjelo pa ti ovo napravi da skrola -->
+                <li><a href="#" onclick="scrollToAbout()" style="--navAni:1">Section1</a></li>
+                <li><a href="#" onclick="scrollWin()" style="--navAni:2">Section2</a></li>
+                <li><a href="#" onclick="scrollToAbout()" style="--navAni:3">Section3</a></li>
+                <li><a href="#" onclick="scrollToAbout()" style="--navAni:4">Section4</a></li>
+                <li><a href="#" onclick="scrollToAbout()" style="--navAni:5">Section5</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+<!-- Slika sa lijeve strane -->
+    <section id="about" class="container">
+        <div class="main">
+            <div class="images">
+                <div style="text-align: center;">
+                    <img src="androidtop.png" alt="" class="img-w">
+                    <span style="font-size: 120px;">android</span>
+                </div>
+                <span class="bg-effect-1">
+                <span class="bg-effect-1"></span>
+
+                </span>
+            </div>
+            <div class="detail"> <!-- desni tekst sa ikonicama -->
+                <h1><span style="color:#2edf85;">Android</span> </h1>
+                <p>Operativni sistem beskonačnih mogućnosti u vašem džepu.</p>
+                <div class="social">
+                    <a href="https://www.linkedin.com/showcase/android_by_google/" style="--socialAni:1"><i
+                            class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/android/" style="--socialAni:2"><i
+                            class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/android" style="--socialAni:3"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.youtube.com/@android" style="--socialAni:4"><i
+                            class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<!-- Skripta za dark mode i moj pokusaj da napravim funkciju za skrolanje on click of a button -->
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+
+        function scrollToAbout() {
+            window.scrollTo(0, 2000);
+        }
+        function scrollWin() {
+          window.scrollTo(0, 500);
+
+        }
+    </script>
+    </script>
+</body>
+
+</html>
