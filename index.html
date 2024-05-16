@@ -23,12 +23,12 @@
                     <i class='bx bx-menu'></i>
                 </div>
             </label>
-            <ul> <!-- Ovdje sam baratao prije sa ovim onclick sctollto da skontam za portfolio kako napraviti da skrola, tldr. to mi nije uspjelo pa ti ovo napravi da skrola -->
-                <li><a href="#" onclick="scrollToAbout()" style="--navAni:1">Section1</a></li>
-                <li><a href="#" onclick="scrollWin()" style="--navAni:2">Section2</a></li>
-                <li><a href="#" onclick="scrollToAbout()" style="--navAni:3">Section3</a></li>
-                <li><a href="#" onclick="scrollToAbout()" style="--navAni:4">Section4</a></li>
-                <li><a href="#" onclick="scrollToAbout()" style="--navAni:5">Section5</a></li>
+            <ul> 
+                <li><a href="#cinj" style="--navAni:1">Činjenice</a></li>
+                <li><a href="#" style="--navAni:2">Section2</a></li>
+                <li><a href="#" style="--navAni:3">Section3</a></li>
+                <li><a href="#" style="--navAni:4">Section4</a></li>
+                <li><a href="#" style="--navAni:5">Section5</a></li>
             </ul>
             <label class="mode">
                 <input type="checkbox" id="darkModeToggle">
@@ -66,8 +66,53 @@
         </div>
     </section>
     
+<!-- Pocetak cinjenica -->
+<section id=cinj --></section>
 
-<!-- Skripta za dark mode i moj pokusaj da napravim funkciju za skrolanje on click of a button -->
+<!-- 1 -->
+<section class="content-section">
+    <div class="text-content">
+        <h1><span style="color:#2edf85;">Činjenica 1</span> </h1>
+         <p>Otvoreni izvor (Open Source): Android je operativni sistem otvorenog koda zasnovan na Linux kernelu, razvijen od strane Google-a. Njegova priroda otvorenog koda omogućava proizvođačima da prilagode softver kako bi odgovarao njihovom hardveru.</p>
+    </div>
+</section>
+
+<!-- 2 -->
+<section class="content-section">
+    <div class="text-content">
+        <h1><span style="color:#2edf85;">Činjenica 2</span> </h1>
+         <p>Globalna Dominacija: Od 2023. godine, Android je najkorišteniji mobilni operativni sistem na svijetu, držeći značajnu većinu tržišnog udjela u poređenju s iOS-om.</p>
+    </div>
+</section>
+
+<!-- 3 -->
+<section class="content-section">
+    <div class="text-content">
+        <h1><span style="color:#2edf85;">Činjenica 3</span> </h1>
+         <p>Raznovrsnost Uređaja: Android pokreće širok spektar uređaja osim pametnih telefona, uključujući tablete, pametne satove, televizore (Android TV), pa čak i automobile (Android Auto).</p>
+    </div>
+</section>
+
+<!-- 4 -->
+<section class="content-section">
+    <div class="text-content">
+        <h1><span style="color:#2edf85;">Činjenica 4</span> </h1>
+         <p>Česta Ažuriranja: Google svake godine izdaje glavna ažuriranja za Android, uvodeći nove funkcije, sigurnosna poboljšanja i poboljšanja performansi. Svaka verzija je nazvana po desertu do Androida 10, nakon čega su prešli na numeričko imenovanje.</p>
+    </div>
+</section>
+
+<!-- 5 -->
+<section class="content-section">
+    <div class="text-content">
+        <h1><span style="color:#2edf85;">Činjenica 5</span> </h1>
+         <p>Prilagodljivost: Android je poznat po visokom nivou prilagodljivosti. Korisnici mogu mijenjati izgled svojih početnih ekrana, instalirati prilagođene pokretače (launchere) i koristiti widgete kako bi personalizirali svoje uređaje.</p>
+    </div>
+</section>
+
+<!-- Kraj cinjenica -->
+
+
+<!-- Skripta za dark mode  -->
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const body = document.body;
@@ -85,14 +130,6 @@
                 localStorage.setItem('darkMode', 'disabled');
             }
         });
-
-        function scrollToAbout() {
-            window.scrollTo(0, 2000);
-        }
-        function scrollWin() {
-          window.scrollTo(0, 500);
-
-        }
     </script>
 </body>
 </html>

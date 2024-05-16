@@ -31,9 +31,10 @@ body {
 header {
     box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
     background: #fff;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1;
+    width: 90%;
 }
 
 .page-header {
@@ -161,11 +162,12 @@ li a:hover {
     width: 450px;
     opacity: 0;
     animation: imageAni 1s ease forwards; 
+    margin-top: 2rem;
 }
 .images {
     background: linear-gradient(145deg, #e2e8ec, #ffffff);
     box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
-    border-top: 2px solid var(--primary-color);
+    border-top: 1px solid var(--primary-color);
 }
 
 /* css kada slika u dark mode-u */
@@ -203,7 +205,28 @@ li a:hover {
     background: var(--primary-dark);
 }
 
+/* Cinjenice */
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 400px;
+    height: 100px; 
+}
 
+.content-section .text-content {
+    width: 50%;
+    padding: 20px;
+    text-align: center; 
+}
+
+.text-content p {
+    font-size: 30px; 
+}
+
+.text-content h1 {
+    font-size: 100px;
+}
 
 /* animacije */
 @keyframes leftSideAni {
