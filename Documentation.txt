@@ -1,0 +1,24 @@
+Install Node.js (if you haven't already): Download and install Node.js from nodejs.org.
+
+Install http-server
+
+Open your command line or terminal and install http-server globally:
+
+npm install -g http-server
+
+
+
+Navigate to your project directory:
+
+cd path/to/your/project
+
+
+
+Start the server:
+
+
+http-server .
+
+
+
+This command will start a local server, and you'll get a URL like http://127.0.0.1:8080. Open this URL in your browser.

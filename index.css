@@ -31,7 +31,7 @@ body {
 header {
     box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
     background: #fff;
-    position: fixed;
+    position: flex;
     top: 0;
     z-index: 1;
     width: 90%;
@@ -43,6 +43,7 @@ header {
     align-items: center;
     padding: 1rem 0;
 }
+
 
 .logo {
     font-size: 1.5rem;
@@ -210,8 +211,8 @@ li a:hover {
     display: flex;
     justify-content: center;
     align-items: center; 
-    margin-top: 400px;
-    height: 100px; 
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .content-section .text-content {
