@@ -1,24 +1,18 @@
-Install Node.js (if you haven't already): Download and install Node.js from nodejs.org.
+Za učitavanje 3D modela u stranici potreban nam je Node.js
+Ako nemate Node.js instaliran, možete ga preuzeti na  nodejs.org.
 
-Install http-server
 
-Open your command line or terminal and install http-server globally:
+Da pokrenemo stranicu prvo trebamo instalirati http-server
 
+Otvorite bash file "install-http-server" da bi instalirali http-server globalno
+
+install-http-server.bash
 npm install -g http-server
 
+Otvorite bash file "pokreni-server" i promijenite directory "cd path/to/your/project" na folder svog projekta. Spasite i pokrenite file "pokreni-server"
 
-
-Navigate to your project directory:
-
+pokreni-server.bash
 cd path/to/your/project
-
-
-
-Start the server:
-
-
 http-server .
 
-
-
-This command will start a local server, and you'll get a URL like http://127.0.0.1:8080. Open this URL in your browser.
+Na kraju control panel-a izbacit će vam jednu ili više ip adresa. Kliknite na njih putem ctrl+mouse click i otvorit će te stranicu sa loading 3D modelom
