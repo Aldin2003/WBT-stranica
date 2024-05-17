@@ -6,13 +6,15 @@ Da pokrenemo stranicu prvo trebamo instalirati http-server
 
 Otvorite bash file "install-http-server" da bi instalirali http-server globalno
 
-install-http-server.bash
+install-http-server.cmd
 npm install -g http-server
 
 Otvorite bash file "pokreni-server" i promijenite directory "cd path/to/your/project" na folder svog projekta. Spasite i pokrenite file "pokreni-server"
 
-pokreni-server.bash
+pokreni-server.cmd
 cd path/to/your/project
-http-server .
+http-server
 
 Na kraju control panel-a izbacit će vam jednu ili više ip adresa. Kliknite na njih putem ctrl+mouse click i otvorit će te stranicu sa loading 3D modelom
+
+CTL + C vam ugasi server i stranicu. 

@@ -276,13 +276,13 @@ li a:hover {
     height: 100px;
     position: absolute;
     left: 50%;
-    top: 160%;
+    top: 155%;
     transform: translate(-50%, -50%);
     
 }
 
 #scroll-left, #scroll-right {
-    font-size: 3em;
+    font-size: 2.5em;
 }
 /* Cinj scroll end*/
 
