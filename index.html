@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="android-icon.svg">
     <title>Android</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
 </head>
 
 <body>
@@ -75,7 +76,14 @@
 </section>
 
 <!-- Pocetak cinjenica -->
-<section id="cinj" class="content-section">
+<section class="scroll-button">
+<button id="scroll-left">&#8592;</button> <!-- strelice za scroll -->
+<button id="scroll-right">&#8594;</button> <!-- strelice za scroll -->
+</section>
+
+<div class="scroll-container">
+    <!-- 1 -->
+<section class="scroll-section" id="cinj" class="content-section">
     <div class="text-content">
         <h1><span style="color:#2edf85;">Činjenica 1</span> </h1>
          <p>Otvoreni izvor (Open Source): Android je operativni sistem otvorenog koda zasnovan na Linux kernelu, razvijen od strane Google-a. Njegova priroda otvorenog koda omogućava proizvođačima da prilagode softver kako bi odgovarao njihovom hardveru.</p>
@@ -83,36 +91,57 @@
 </section>
 
 <!-- 2 -->
-<section class="content-section">
+<section class="scroll-section" class="content-section">
     <div class="text-content">
         <h1><span style="color:#2edf85;">Činjenica 2</span> </h1>
-         <p>Globalna Dominacija: Od 2023. godine, Android je najkorišteniji mobilni operativni sistem na svijetu, držeći značajnu većinu tržišnog udjela u poređenju s iOS-om.</p>
+         <p> Globalna Dominacija: Od 2023. godine, Android je najkorišteniji mobilni operativni sistem na svijetu, držeći značajnu većinu tržišnog udjela u poređenju s iOS-om. </p>
     </div>
 </section>
 
 <!-- 3 -->
-<section class="content-section">
+<section class="scroll-section" class="content-section">
     <div class="text-content">
         <h1><span style="color:#2edf85;">Činjenica 3</span> </h1>
-         <p>Raznovrsnost Uređaja: Android pokreće širok spektar uređaja osim pametnih telefona, uključujući tablete, pametne satove, televizore (Android TV), pa čak i automobile (Android Auto).</p>
+         <p> Raznovrsnost Uređaja: Android pokreće širok spektar uređaja osim pametnih telefona, uključujući tablete, pametne satove, televizore (Android TV), pa čak i automobile (Android Auto). </p>
     </div>
 </section>
 
 <!-- 4 -->
-<section class="content-section">
+<section class="scroll-section" class="content-section">
     <div class="text-content">
         <h1><span style="color:#2edf85;">Činjenica 4</span> </h1>
-         <p>Česta Ažuriranja: Google svake godine izdaje glavna ažuriranja za Android, uvodeći nove funkcije, sigurnosna poboljšanja i poboljšanja performansi. Svaka verzija je nazvana po desertu do Androida 10, nakon čega su prešli na numeričko imenovanje.</p>
+         <p>Raznovrsnost Uređaja: Android pokreće širok spektar uređaja osim pametnih telefona, uključujući tablete, pametne satove, televizore (Android TV), pa čak i automobile (Android Auto).</p>
     </div>
 </section>
 
 <!-- 5 -->
-<section class="content-section">
+<section class="scroll-section" class="content-section">
     <div class="text-content">
         <h1><span style="color:#2edf85;">Činjenica 5</span> </h1>
          <p>Prilagodljivost: Android je poznat po visokom nivou prilagodljivosti. Korisnici mogu mijenjati izgled svojih početnih ekrana, instalirati prilagođene pokretače (launchere) i koristiti widgete kako bi personalizirali svoje uređaje.</p>
     </div>
 </section>
+</div>
+
+<script>
+    var container = document.querySelector('.scroll-container');
+    var sections = Array.from(document.querySelectorAll('.scroll-section'));
+    var currentIndex = 0;
+
+    document.getElementById('scroll-left').addEventListener('click', function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            container.scrollLeft = sections[currentIndex].offsetLeft;
+        }
+    });
+
+    document.getElementById('scroll-right').addEventListener('click', function() {
+        if (currentIndex < sections.length - 1) {
+            currentIndex++;
+            container.scrollLeft = sections[currentIndex].offsetLeft;
+        }
+    });
+</script>
 
 <!-- Kraj cinjenica -->
 
@@ -131,7 +160,18 @@
         <model-viewer src="google_pixel_7_pro.glb" alt="3D model of a Google Pixel" auto-rotate camera-controls style="width: 100%; height: 600px;">
         </model-viewer>
     </div>
-    <p></p>
+    <section class="content-section">
+        <div class="text-content">
+            <h1><span style="color:#2edf85;">Specifikacije</span> </h1>
+            <ul>
+                <li>Procesor: Qualcomm Snapdragon 8 Gen 2</li>
+                <li>Memorija: 8GB RAM, 128/256GB skladištenje</li>
+                <li>Kamera: 50MP glavna, 12MP ultraširoka, 48MP telefoto</li>
+                <li>Baterija: 5000mAh, brzo punjenje od 65W</li>
+                <li>Operativni sistem: Android 13</li>
+            </ul>
+            <a href="https://store.google.com/regionpicker?pli=1" class="purchase-button">Kupi</a>
+        </div>
 </section>
 
 <!-- Skripta za dark mode  -->
