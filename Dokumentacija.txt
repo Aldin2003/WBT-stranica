@@ -4,12 +4,12 @@ Ako nemate Node.js instaliran, možete ga preuzeti na  nodejs.org.
 
 Da pokrenemo stranicu prvo trebamo instalirati http-server
 
-Otvorite bash file "install-http-server" da bi instalirali http-server globalno
+Otvorite cmd file "install-http-server" da bi instalirali http-server globalno
 
 install-http-server.cmd
 npm install -g http-server
 
-Otvorite bash file "pokreni-server" i promijenite directory "cd path/to/your/project" na folder svog projekta. Spasite i pokrenite file "pokreni-server"
+Otvorite cmd file "pokreni-server" i promijenite directory "cd path/to/your/project" na folder svog projekta. Spasite i pokrenite file "pokreni-server"
 
 pokreni-server.cmd
 cd path/to/your/project
