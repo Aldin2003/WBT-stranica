@@ -276,7 +276,7 @@ li a:hover {
     height: 100px;
     position: absolute;
     left: 50%;
-    top: 155%;
+    top: 162%;
     transform: translate(-50%, -50%);
     
 }
@@ -293,8 +293,22 @@ h2 {
     color: #43a84a;
 }
 
+/* Snap scrolling*/
+html {
+    scroll-snap-type: y mandatory;
+}
+
+.section {
+    margin: 0px auto;
+    max-width: 1080px;
+    height: 100vh;
+    scroll-snap-align: start;
+
+}
 
 
+
+/* Snap scrolling end*/
 
 /* animacije */
 @keyframes leftSideAni {
